@@ -33,8 +33,9 @@ top = counter.sort_by {|_key, value| value}.reverse.take(3)
 
 
 puts ''
-puts "Top 3 movies by amount of the sessions:".center(20)
+puts "Top 3 movies by amount of the sessions:"
 puts ''
 top.each_with_index do |value, i|
   puts "#{i+1}. #{value[0]} - #{value[1]} sessions."
 end
+puts ''
