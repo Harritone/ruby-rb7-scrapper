@@ -10,6 +10,7 @@ The script parses the page https://rb7.ru/afisha/movie-shows and returns Top 3 m
 ```$ ruby scrap.rb```
 
 # Output example:
+```
 Top 3 movies by amount of the sessions:
 
 1. Райя и последний дракон - 64 sessions. 
