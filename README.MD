@@ -1,4 +1,4 @@
-### Description
+# Description
 This is a base implementation of the attitude test: __Разработать скрипт парсинга афиши кино с портла РБ7 и вывести ТОП3 фильмов по количеству сеансов.__
 The script parses the page https://rb7.ru/afisha/movie-shows and returns Top 3 movies by the sessions' amount for today.
 
@@ -9,7 +9,7 @@ The script parses the page https://rb7.ru/afisha/movie-shows and returns Top 3 m
 ## To run the script:
 ```$ ruby scrap.rb```
 
-# Output example:
+### Output example:
 ```
 Top 3 movies by amount of the sessions:
 
