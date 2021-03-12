@@ -11,6 +11,9 @@ table = parsed.css('table.afisha-schedule')
 rows = table.css('tr')
 odd = rows.css('tr.odd')
 even = rows.css('tr.even')
+even_past = rows.css('tr.even.past') || []
+odd_past = rows.css('tr.odd.past') || []
+
 
 counter = {}
 result = []
@@ -20,16 +23,17 @@ def nil.+(value)
   value
 end
 
-(odd + even).each do |row|
-  result << row.css('td.film').text.strip
+def result.add(*args)
+  args.flatten.each { |row| self << row.css('td.film').text.strip }
 end
 
+result.add( odd, even, even_past, odd_past)
 
 result.each do |title|
   counter[title] += 1
 end
 
-top = counter.sort_by {|_key, value| value}.reverse.take(3)
+top = counter.sort_by { |_key, value| value }.reverse.take(3)
 
 
 puts ''
